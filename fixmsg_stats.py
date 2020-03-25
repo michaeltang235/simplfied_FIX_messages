@@ -149,19 +149,27 @@ print('\n')
 
 # Task 5: get mean, max., min., median prices for the most popular product traded
 
+# create lenqtylist to store length of each list of qty. for each product traded
 lenqtylist = []
 for key in ordqty_dict:
-    curlenqty = len(ordqty_dict[key])
-    lenqtylist.append(curlenqty)
+    curlenqty = len(ordqty_dict[key])   # get current length of list of qty.
+    lenqtylist.append(curlenqty)   # append the length to lenqtylist
 
+# e.g. qty list with five items means the product has been traded for 5 times
+# get the max. length of qty. list to get the most popular product
 maxlenqty = max(lenqtylist)
 
+# create mpopkey list for storing the key for most popular product traded in the ordqty_dict
+# a list is used in case there are more than one product sharing the same freq. of trading
+# i.e. more than one product having the same number of times being traded
 mpopkey = []
 for key in ordqty_dict:
-    curlenqty = len(ordqty_dict[key])
-    if curlenqty == maxlenqty:
-        mpopkey.append(key)
+    curlenqty = len(ordqty_dict[key])   # get current length of qty. traded for each key
+    if curlenqty == maxlenqty:   # find the key corresponding to the most popular product
+        mpopkey.append(key)   # get the key to the list of mpopkey
 
+# create symbol_id list for storing list of product symbols
+# create price list for storing price for each transaction (message)
 symbollist = []
 pricelist = []
 for line in msglist:   # for each line in msglist
@@ -169,11 +177,11 @@ for line in msglist:   # for each line in msglist
 
     productmsg = msgparts[2]  # get product msg. tag and value from the second item of the split list
     symbolid = productmsg[3:]  # obtain value (symbol_id) of tag by getting all remaining entries of the item
-    symbollist.append(symbolid)
+    symbollist.append(symbolid)   # append symbol_id to the list of symbol
 
     pricemsg = msgparts[9]  # get price tag and value from the ninth item of the split list
     price = pricemsg[3:-1]  # obtain value (price) of tag by getting all entries [3:second last] of the item
-    pricelist.append(price)
+    pricelist.append(price)   # append price to the list of price
 
 
 # create price index list for storing indices of most popular
@@ -181,8 +189,8 @@ for line in msglist:   # for each line in msglist
 priceindex = []
 
 # mpopkey stores symbol_id for most popular product(s) traded
-# use list comprehension to get indices of all entries with symbol_id in the list
-# matching that of mpopkey
+# use list comprehension to get indices of all entries of
+# symbol_id in the list matching that of mpopkey
 for i in range(0, len(mpopkey)):
     priceindex.append([index for index, value in enumerate(symbollist) if value == mpopkey[i]])
 
