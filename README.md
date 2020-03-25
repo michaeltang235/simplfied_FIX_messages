@@ -5,7 +5,7 @@ In this repository, a set of simplified rules are implemented to generate a seri
 
 8=FIX.4.2|35=D|55=SYMBOL_1|54=1|38=100|40=2|59=0|167=FUT|1=CLIENT_1|44=199.99 
 
-Each message field is delimited by a vertical bar '|', and each field is specified by a tag and a responding value. For instance, the message field (54=1) has a tag of 54 and a value of 1. Each tag and the associated value has its own meaning. In the example given, tag of 54 represents the field 'side', while a value of 1 denotes the action of 'Buy'. For further details of the meaning of them, please refer to the website of FIX protocol documentation,
+Each message field is delimited by a vertical bar '|', and each field is specified by a tag and a corresponding value. For instance, the message field (54=1) has a tag of 54 and a value of 1. Each tag and the associated value has its own meaning. In the example given, tag of 54 represents the field 'side', while a value of 1 denotes the action of 'Buy'. For further details of the meaning of them, please refer to the website of FIX protocol documentation,
 
 https://www.onixs.biz/fix-dictionary/4.2/fields_by_tag.html
 
