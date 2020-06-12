@@ -32,7 +32,7 @@ The set of simplified rules adopted are given below,
 
 **(1):** The first one named fixmessage.py intakes the number of fake FIX messages interested as a command-line input argument and generates the required lines of messages with randomly chosen values for each tag, outputing the results into a .txt file named 'fixmsg.txt'.
 
-**e.g.** issuing the follwoing command on terminal.  
+**e.g.** issuing the follwoing command on terminal,
 
 python fixmessage.py 1000
 
