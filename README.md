@@ -11,8 +11,8 @@ https://www.onixs.biz/fix-dictionary/4.2/fields_by_tag.html
 
 The set of simplified rules adopted are given below,
 
-8=FIX.4.2 (always this value)
-35=D (always a new order message ‘D’)
+8=FIX.4.2 (always this value)\\
+35=D (always a new order message ‘D’)\\
 55=SYMBOL_N (Symbol meaning the product name: N is a number) Note that in real life this could be a stock like GOOGLE
 54=[1-2] side (buy or sell the given symbol/product)
 38=N (quantity of the symbol/product that you want to buy or sell)
