@@ -28,18 +28,18 @@ The set of simplified rules adopted are given below,
 44=Any price (price at which you will sell or buy the given product)   <br />
 
 
-There are two scripts presented in this repository. 
+**There are two scripts presented in this repository. **
 
-(1): The first one named fixmessage.py intakes the number of fake FIX messages interested as a command-line input argument and generates the required lines of messages with randomly chosen values for each tag, outputing the results into a .txt file named 'fixmsg.txt'.
+**(1):** The first one named fixmessage.py intakes the number of fake FIX messages interested as a command-line input argument and generates the required lines of messages with randomly chosen values for each tag, outputing the results into a .txt file named 'fixmsg.txt'.
 
-e.g. issuing the follwoing command on terminal.  
+**e.g.** issuing the follwoing command on terminal.  
 
 python fixmessage.py 1000
 
 generates 1000 random and simplified FIX 4.2 messages written in a file called fixmsg.txt
 
 
-(2): The second one named fixmsg_stats.py takes the messages files written in part (1) and perform the following calculations to obtain statistical insights on the messages generated. 
+**(2):** The second one named fixmsg_stats.py takes the messages files written in part (1) and perform the following calculations to obtain statistical insights on the messages generated. 
 
 Task 1: get message amount per client (tag1) <br />
 Task 2: get list of all traded products (symbols) <br />
