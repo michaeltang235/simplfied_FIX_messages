@@ -12,27 +12,18 @@ https://www.onixs.biz/fix-dictionary/4.2/fields_by_tag.html
 The set of simplified rules adopted are given below,
 
 8=FIX.4.2 (always this value)
-
 35=D (always a new order message ‘D’)
-
 55=SYMBOL_N (Symbol meaning the product name: N is a number) Note that in real life this could be a stock like GOOGLE
-
 54=[1-2] side (buy or sell the given symbol/product)
-
 38=N (quantity of the symbol/product that you want to buy or sell)
-
 40=[1-5] (only order types 1-5 per the FIX 4.2 spec: http://btobits.com/fixopaedia/fixdic42/tag_40_OrdType_.html)
-
 59=[0-6] (all time in force orders per FIX 4.2 spec: https://www.onixs.biz/fix-dictionary/4.2/tagNum_59.html)
-
 167=(FUT|OPT|CS) (Futures, Options and Common stocks)
-
 1=CLIENT_N (random client id)
-
 44=Any price (price at which you will sell or buy the given product)
 
 
-There are two scripts presented in this repository. 
+There are two scripts presented in this repository. \\
 (1): The first one named fixmessage.py intakes the number of fake FIX messages interested as a command-line input argument and generates the required lines of messages with randomly chosen values for each tag, outputing the results into a .txt file named 'fixmsg.txt'.
 
 e.g. issuing the follwoing command on terminal
@@ -48,7 +39,7 @@ Task 1: get message amount per client (tag1)\
 Task 2: get list of all traded products (symbols)\
 Task 3: get the most popular order type (tag40)\
 Task 4: get average ordered quantity per product\
-Task 5: get mean, max., min., median prices of the most popular product traded\
+Task 5: get mean, max., min., median prices of the most popular product traded
 
 
 
