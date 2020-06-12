@@ -48,7 +48,7 @@ Task 1: get message amount per client (tag1)\
 Task 2: get list of all traded products (symbols)\
 Task 3: get the most popular order type (tag40)\
 Task 4: get average ordered quantity per product\
-Task 5: get mean, max., min., median prices for the most popular product traded\
+Task 5: get mean, max., min., median prices of the most popular product traded\
 
 
 
