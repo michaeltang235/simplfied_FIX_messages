@@ -13,29 +13,26 @@ The set of simplified rules adopted are given below,
 
 8=FIX.4.2 (always this value) <br />
 35=D (always a new order message ‘D’) <br />
+55=SYMBOL_N (Symbol meaning the product name: N is a number) Note that in real life this could be a stock like GOOGLE. <br />
+54=[1-2] side (buy or sell the given symbol/product) <br />
+38=N (quantity of the symbol/product that you want to buy or sell) <br />
+38=N (quantity of the symbol/product that you want to buy or sell) <br />
+40=[1-5] (only order types 1-5 per the FIX 4.2 spec: http://btobits.com/fixopaedia/fixdic42/tag_40_OrdType_.html). <br />
+38=N (quantity of the symbol/product that you want to buy or sell)  <br />
+59=[0-6] (all time in force orders per FIX 4.2 spec: https://www.onixs.biz/fix-dictionary/4.2/tagNum_59.html). <br />
+38=N (quantity of the symbol/product that you want to buy or sell)  <br />
+167=(FUT|OPT|CS) (Futures, Options and Common stocks)  <br />
+38=N (quantity of the symbol/product that you want to buy or sell) <br />
+1=CLIENT_N (random client id). <br />
 
-55=SYMBOL_N (Symbol meaning the product name: N is a number) Note that in real life this could be a stock like GOOGLE
-
-54=[1-2] side (buy or sell the given symbol/product)
-
-38=N (quantity of the symbol/product that you want to buy or sell)
-
-40=[1-5] (only order types 1-5 per the FIX 4.2 spec: http://btobits.com/fixopaedia/fixdic42/tag_40_OrdType_.html)
-
-59=[0-6] (all time in force orders per FIX 4.2 spec: https://www.onixs.biz/fix-dictionary/4.2/tagNum_59.html)
-
-167=(FUT|OPT|CS) (Futures, Options and Common stocks)
-
-1=CLIENT_N (random client id)
-
-44=Any price (price at which you will sell or buy the given product)
+44=Any price (price at which you will sell or buy the given product)   <br />
 
 
 There are two scripts presented in this repository. 
 
 (1): The first one named fixmessage.py intakes the number of fake FIX messages interested as a command-line input argument and generates the required lines of messages with randomly chosen values for each tag, outputing the results into a .txt file named 'fixmsg.txt'.
 
-e.g. issuing the follwoing command on terminal
+e.g. issuing the follwoing command on terminal.  
 
 python fixmessage.py 1000
 
@@ -44,10 +41,10 @@ generates 1000 random and simplified FIX 4.2 messages written in a file called f
 
 (2): The second one named fixmsg_stats.py takes the messages files written in part (1) and perform the following calculations to obtain statistical insights on the messages generated. 
 
-Task 1: get message amount per client (tag1)\
-Task 2: get list of all traded products (symbols)\
-Task 3: get the most popular order type (tag40)\
-Task 4: get average ordered quantity per product\
+Task 1: get message amount per client (tag1) <br />
+Task 2: get list of all traded products (symbols) <br />
+Task 3: get the most popular order type (tag40) <br />
+Task 4: get average ordered quantity per product <br />
 Task 5: get mean, max., min., median prices of the most popular product traded
 
 
