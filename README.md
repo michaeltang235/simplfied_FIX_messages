@@ -25,7 +25,7 @@ The set of simplified rules adopted are given below,
 38=N (quantity of the symbol/product that you want to buy or sell) <br />
 1=CLIENT_N (random client id). <br />
 44=Any price (price at which you will sell or buy the given product)   <br />
-
+ <br />
 
 
 **There are two scripts presented in this repository.**
