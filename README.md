@@ -1,7 +1,7 @@
 # simplfied_FIX_messages
 Financial Information eXchange (FIX) is an open source protocol widely used to trade all asset types in the global financial systems. It provides a machine-readable data that can be shared between dealers and institution clients for communicating trade information. 
 
-In this repository, a set of simplified rules are implemented to generate a series of fake FIX 4.2 messages. An example is given below.
+In this repository, a set of simplified rules is implemented to generate a series of fake FIX 4.2 messages. An example is given below.
 
 8=FIX.4.2|35=D|55=SYMBOL_1|54=1|38=100|40=2|59=0|167=FUT|1=CLIENT_1|44=199.99 
 
@@ -9,7 +9,7 @@ Each message field is delimited by a vertical bar '|', and each field is specifi
 
 https://www.onixs.biz/fix-dictionary/4.2/fields_by_tag.html
 
-The set of simplified rules adopted are given below,
+The set of simplified rules adopted is given below,
 
 8=FIX.4.2 (always this value) <br />
 35=D (always a new order message ‘D’) <br />
